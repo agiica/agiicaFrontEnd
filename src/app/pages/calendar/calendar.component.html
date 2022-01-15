@@ -12,14 +12,6 @@
         </span>
       </p>
     </div>
-    <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-      <a href="https://calendar.google.com/calendar/ical/bgudccobvjdigft93bk4njsvt0%40group.calendar.google.com/public/basic.ics" class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-black bg-gray-200 hover:bg-gray-400">
-        <span class="icon">
-          <i class="fa fa-calendar"></i>
-        </span>
-        &nbsp;Naptár felirakozás
-      </a>
-    </div>
   </div>
 </div>
 
@@ -40,11 +32,11 @@
       <p class="font-bold align-middle">{{items.summary}}</p>
       <p class="font-light align-middle">{{items.start.dateTime.split(' ')[4]}} - {{items.end.dateTime}}</p>
   </div>
-  <div name="logo">
-    <img src="assets/img/r6.webp" class="w-10 h-10 float-right clear-right" alt="Rainbow 6 Siege" *ngIf="items.summary.toLowerCase().includes('r6')">
-    <img src="assets/img/pubg.webp" class="w-10 h-10 float-right clear-right" alt="PUBG" *ngIf="items.summary.toLowerCase().includes('pubg')">
-    <img src="assets/img/valorant.webp" class="w-10 h-10 float-right clear-right" alt="VALORANT" *ngIf="items.summary.toLowerCase().includes('valorant')">
-    <img src="assets/img/chat.webp" class="w-10 h-10 float-right clear-right" alt="Just Chatting"  *ngIf="items.summary.toLowerCase().includes('chat')">
+  <div class="flex -space-x-1 overflow-hidden justify-end">
+    <img src="assets/img/r6.webp" class="inline-block w-10 h-10" alt="Rainbow 6 Siege" *ngIf="items.summary.toLowerCase().includes('r6')">
+    <img src="assets/img/pubg.webp" class="inline-block -10 h-10" alt="PUBG" *ngIf="items.summary.toLowerCase().includes('pubg')">
+    <img src="assets/img/valorant.webp" class="inline-block w-10 h-10" alt="VALORANT" *ngIf="items.summary.toLowerCase().includes('valorant')">
+    <img src="assets/img/chat.webp" class="inline-block w-10 h-10" alt="Just Chatting"  *ngIf="items.summary.toLowerCase().includes('chat')">
   </div>
   <div class="col-span-3 px-4 font-light" name="description">
       {{items.description}}
